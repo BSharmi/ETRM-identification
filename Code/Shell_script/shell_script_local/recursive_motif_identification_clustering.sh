@@ -135,34 +135,34 @@ for ((idms=0;idms<=num_DMS-1;idms++)); do
 		fi
 			
 		## create fasta sequence 
-	    perl $seqextractpath -r $refpath  ${name_DMS[idms]}/${topmotif:0:3}/${topmotif:0:3}.txt
-        ## find secondary motifs by masking
-	    #findMotifs.pl ${name_DMS[idms]}/${topmotif:0:3}/${topmotif:0:3}.withSquence.fa  mouse ${name_DMS[idms]}/${topmotif:0:3}/  -mset vertebrates  -fastaBg ${name_DMS[idms]}/${name_DMS[idms]##*/}_background.withSquence.fa  -nomotif -p 10 -maskMotif ${name_DMS[idms]}/${topmotif:0:3}.search.motif
-	    findMotifs.pl ${name_DMS[idms]}/${topmotif:0:3}/${topmotif:0:3}.withSquence.fa  mouse ${name_DMS[idms]}/${topmotif:0:3}/  -mset vertebrates  -fastaBg ${name_DMS[idms]}/*_background.withSquence.fa  -nomotif -p 10 
-        ## delete unwanted motifs sed does not work
-	    ed -s ${name_DMS[idms]}/${topmotif:0:3}/knownResults.txt <<< $'g/^SeqB/d\nw' 
-        ed -s ${name_DMS[idms]}/${topmotif:0:3}/knownResults.txt  <<< $'g/^Unkno/d\nw' 
+	    	perl $seqextractpath -r $refpath  ${name_DMS[idms]}/${topmotif:0:3}/${topmotif:0:3}.txt
+        	## find secondary motifs by masking
+	    	#findMotifs.pl ${name_DMS[idms]}/${topmotif:0:3}/${topmotif:0:3}.withSquence.fa  mouse ${name_DMS[idms]}/${topmotif:0:3}/  -mset vertebrates  -fastaBg ${name_DMS[idms]}/${name_DMS[idms]##*/}_background.withSquence.fa  -nomotif -p 10 -maskMotif ${name_DMS[idms]}/${topmotif:0:3}.search.motif
+	    	findMotifs.pl ${name_DMS[idms]}/${topmotif:0:3}/${topmotif:0:3}.withSquence.fa  mouse ${name_DMS[idms]}/${topmotif:0:3}/  -mset vertebrates  -fastaBg ${name_DMS[idms]}/*_background.withSquence.fa  -nomotif -p 10 
+        	## delete unwanted motifs sed does not work
+	    	ed -s ${name_DMS[idms]}/${topmotif:0:3}/knownResults.txt <<< $'g/^SeqB/d\nw' 
+        	ed -s ${name_DMS[idms]}/${topmotif:0:3}/knownResults.txt  <<< $'g/^Unkno/d\nw' 
             
-       	## check if any sites remain
-        if [ "$(ls -A ${name_DMS[idms]}/${topmotif:0:3}_minus)" ]; then 
-        	## create fasta for setdiff
-          	perl $seqextractpath -r $refpath  ${name_DMS[idms]}/${topmotif:0:3}_minus/${topmotif:0:3}_minus.txt
-            ## find new candidate TF motifs
-            findMotifs.pl ${name_DMS[idms]}/${topmotif:0:3}_minus/${topmotif:0:3}_minus.withSquence.fa  mouse ${name_DMS[idms]}/${topmotif:0:3}_minus/  -mset vertebrates  -fastaBg ${name_DMS[idms]}/*_background.withSquence.fa  -nomotif -p 10
-            ## delete unwanted motifs sed does not work
+       		## check if any sites remain
+        	if [ "$(ls -A ${name_DMS[idms]}/${topmotif:0:3}_minus)" ]; then 
+        		## create fasta for setdiff
+          		perl $seqextractpath -r $refpath  ${name_DMS[idms]}/${topmotif:0:3}_minus/${topmotif:0:3}_minus.txt
+            		## find new candidate TF motifs
+            		findMotifs.pl ${name_DMS[idms]}/${topmotif:0:3}_minus/${topmotif:0:3}_minus.withSquence.fa  mouse ${name_DMS[idms]}/${topmotif:0:3}_minus/  -mset vertebrates  -fastaBg ${name_DMS[idms]}/*_background.withSquence.fa  -nomotif -p 10
+            		## delete unwanted motifs sed does not work
 			#sed -i '/^SeqB/d' ${name_DMS[idms]}/${topmotif:0:3}_minus/knownResults.txt
 			ed -s ${name_DMS[idms]}/${topmotif:0:3}_minus/knownResults.txt <<< $'g/^SeqB/d\nw'
 			ed -s ${name_DMS[idms]}/${topmotif:0:3}_minus/knownResults.txt <<< $'g/^Unkno/d\nw'  			
-            ## check the top p-value of remaining known motifs
-            sigpval=$(awk 'FNR <= 2 {print $3}' ${name_DMS[idms]}/${topmotif:0:3}_minus/knownResults.txt| awk 'NR>1')
-            ## increase counter
-            (( counter++ ))
-            ## update oldmotif
-            oldmotif_fa=${name_DMS[idms]}/${topmotif:0:3}_minus/${topmotif:0:3}_minus.withSquence.fa
-            oldmotif_txt=${name_DMS[idms]}/${topmotif:0:3}_minus/${topmotif:0:3}_minus.txt
-        else 
-            sigpval=1 
-        fi    	
+            		## check the top p-value of remaining known motifs
+            		sigpval=$(awk 'FNR <= 2 {print $3}' ${name_DMS[idms]}/${topmotif:0:3}_minus/knownResults.txt| awk 'NR>1')
+            		## increase counter
+            		(( counter++ ))
+            		## update oldmotif
+            		oldmotif_fa=${name_DMS[idms]}/${topmotif:0:3}_minus/${topmotif:0:3}_minus.withSquence.fa
+            		oldmotif_txt=${name_DMS[idms]}/${topmotif:0:3}_minus/${topmotif:0:3}_minus.txt
+        	else 
+            		sigpval=1 
+        	fi    	
 	done	
 	## plot graph
 	## plot top TFS from all known results
