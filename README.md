@@ -1,2 +1,2 @@
 # TRM-identification
-Recursive TRM identification using TF motifs
+Recursive identification of Transcriptional Regulatory Modules (TRMs) within different Differentially Methylated Regions clusters. 
