@@ -39,6 +39,9 @@ Explanation of command:
 -h: explains required parameters
 The command will cluster DMRs, and create a folder for each cluster name containing the tab delimited DMRs files and the corresponding background files
 
+#### Running scripts on server
+
+
 ### Recursive TRM identification on entire DMR matrix:
 
 ./recursive_motif_identification_noclustering.sh –i <path to input directory containing DMR files> -H <path to motif database> -r <fasta file> -target <DMR matrix> -background <DMR background matrix> -s <sequence extractor script> -R <path to R script files>
