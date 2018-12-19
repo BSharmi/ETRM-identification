@@ -96,4 +96,10 @@ Explanation of command:
 -r: reference fasta file; examples are mm10.fa, hg19.fa etc
 -h: explains required parameters
 
+#### Running scripts on server
+
+```
+sbatch --export=idir=Examples/,Hpath=/home/bsharmi6/HOMER_custom/,refpath=/home/bsharmi6/mm10bowtie2/mm10.fa,seqextractpath=Code/Perl_script/sequence_extractor.pl,Rpath=Code/R_script/ recursive_motif_identification_clustering.sbatch
+```
+
 
