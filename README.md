@@ -2,8 +2,9 @@
 The tool can be used to identify transcriptional regulatory modules (TRMs) enriched within differentially methylated regions (DMRs) by recursively selecting a candidate transcription factor (TF) based on a predefined threshold. Given a set of target DMRs and background regions, it uses HOMER’s known motif enrichment functionality to achieve the goal. The user has the option to cluster the DMRs into different subsets. Clustering is based on WGCNA (Weighted Gene Correlation Network Analysis) algorithm. Other clustering algorithms such as K-means can also be used. On the other hand, the user can also directly apply recursive TRM identification on the entire set of DMRs. 
 
 ## Methylated motifs
-In order to add methylated motif PWMs to an existing motif databse such as provided by HOMER, please add the motif PWMs to an existing library. For example, to add methylated motifs to HOMER's known motif library of vertebrates, please copy the motifs (motifs.zip) to HOMER library/data/knownTFs/motifs and unzip the file. 
-The user can also append the motifs to an existing motif file. For e.g. user can append the methylated motifs to HOMER's known motif files for vertebrates. 
+In order to add methylated motif PWMs to an existing motif databse such as provided by HOMER, please add the motif PWMs to an existing library. \
+For example, to add methylated motifs to HOMER's known motif library of vertebrates, please copy the motifs (motifs.zip) to HOMER library/data/knownTFs/motifs and unzip the file. \
+The user can also append the motifs to an existing motif file. For e.g. user can append the methylated motifs to HOMER's known motif files for vertebrates (/home/bsharmi6/HOMER_custom/data/knownTFs/vertebrates/known.motifs).\ 
 An snapshot of the motif database containing methylated motifs in addition to HOMER's known motifs (e.g. path = /home/bsharmi6/HOMER_custom/data/knownTFs/motifs/) is given below - 
 
 ![Motif files](https://github.com/BSharmi/TRM-identification/blob/master/Images/motif.png)
@@ -106,4 +107,4 @@ Explanation of command:
 sbatch --export=idir=Examples/,Hpath=/home/bsharmi6/HOMER_custom/,refpath=/home/bsharmi6/mm10bowtie2/mm10.fa,seqextractpath=Code/Perl_script/sequence_extractor.pl,Rpath=Code/R_script/ recursive_motif_identification_clustering.sbatch
 ```
 
-Contact:bsharmi6@vt.edu
+Contact: bsharmi6@vt.edu
