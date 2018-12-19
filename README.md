@@ -39,12 +39,17 @@ Explanation of command:
 -h: explains required parameters
 The command will cluster DMRs, and create a folder for each cluster name containing the tab delimited DMRs files and the corresponding background files
 
-### Recursive TRM identification on entire DMS:
+### Recursive TRM identification on entire DMR matrix:
 
-./recursive_motif_identification_noclustering.sh –i <path to input directory containing DMS> -H <path to motif database> -r <fasta file> -s <sequence extractor script> -R <path to R script files>
+./recursive_motif_identification_noclustering.sh –i <path to input directory containing DMR files> -H <path to motif database> -r <fasta file> -s <sequence extractor script> -R <path to R script files>
 
 Example on demo data:
-./recursive_motif_identification_noclustering.sh -i Data/ -H Motif_db –r mm10.fa –s sequence_extractor.pl –R R_script/
+
+```
+cd Code/Shell_script/shell_script_local/ 
+
+./recursive_motif_identification_noclustering.sh -i Examples/ -H <path to motif database> –r mm10.fa –s Code/Perl_script/sequence_extractor.pl –R Code/R_script/
+```
 
 Explanation of command:
 -i: path containing the DMS file
@@ -55,12 +60,17 @@ Explanation of command:
 -h: explains required parameters
 
 
-### Recursive TRM identification on DMS cluster :
+### Recursive TRM identification on DMR cluster :
 
-./recursive_motif_identification_clustering.sh –i <path to input directory containing DMS clusters> -H <path to motif database> -r <fasta file> -s <sequence extractor script> -R <path to R script files>
+./recursive_motif_identification_clustering.sh –i <path to input directory containing DMR clusters> -H <path to motif database> -r <fasta file> -s <sequence extractor script> -R <path to R script files>
 
 Example on demo data:
-./recursive_motif_identification_clustering.sh -i Data/ -H Motif_db –r mm10.fa –s sequence_extractor.pl –R R_script/
+
+```
+cd Code/Shell_script/shell_script_local/ 
+
+./recursive_motif_identification_clustering.sh -i Examples/ -H <path to motif database> –r mm10.fa –s Code/Perl_script/sequence_extractor.pl –R Code/R_script/
+```
 
 Explanation of command:
 -i: path containing the DMS clusters
