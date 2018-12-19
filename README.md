@@ -20,6 +20,7 @@ Please download a genome fa file (e.g. mm10.fa). It is a large file and has not 
 
 ### Cluster DMR 
 
+cd Code/Shell_script/shell_script_local/ 
 ./run_DMR_clustering_script.sh -R <path to R script files> –o <path to output directory> -d <3 column BED format DMS file> -x <Methylome matrix> -db <3 column BED format DMS background file> 
 
 Example on demo data:
