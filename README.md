@@ -41,14 +41,14 @@ The command will cluster DMRs, and create a folder for each cluster name contain
 
 ### Recursive TRM identification on entire DMR matrix:
 
-./recursive_motif_identification_noclustering.sh –i <path to input directory containing DMR files> -H <path to motif database> -r <fasta file> -s <sequence extractor script> -R <path to R script files>
+./recursive_motif_identification_noclustering.sh –i <path to input directory containing DMR files> -H <path to motif database> -r <fasta file> -target <DMR matrix> -background <DMR background matrix> -s <sequence extractor script> -R <path to R script files>
 
 Example on demo data:
 
 ```
 cd Code/Shell_script/shell_script_local/ 
 
-./recursive_motif_identification_noclustering.sh -i Examples/ -H <path to motif database> –r mm10.fa –s Code/Perl_script/sequence_extractor.pl –R Code/R_script/
+./recursive_motif_identification_noclustering.sh -i Examples/ -H <path to motif database> –r mm10.fa -target Examples/DMR.txt -background Examples/DMR_background.txt –s Code/Perl_script/sequence_extractor.pl –R Code/R_script/
 ```
 
 Explanation of command:
