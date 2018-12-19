@@ -15,6 +15,7 @@ In order to add methylated motif PWMs to an existing motif databse such as provi
 5.	Motif database: Motif libraries compiled from HOMER and other public databases (for details see the paper)
 
 Please download a genome fa file (e.g. mm10.fa). It is a large file and has not been provided here.
+Clone the Github repository to a local system or a server
 
 ## Below are some command line arguments to perform different functions:
 
