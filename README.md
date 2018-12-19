@@ -45,7 +45,7 @@ The command will cluster DMRs, and create a folder for each cluster name contain
 Since WGCNA can be slow on large DMR matrices, it might be efficient to run the scripts by submitting as jobs on a high performance computing system. The script below shows how to run the scripts on server -  
 
 ```
-sbatch --export=Rpath=Code/R_script/DMS_clustering_general.R,outpath=<Output path>,x=Examples/Methylation_matrix.txt,dms=Examples/DMS.txt,dms_background=Examples/DMS_background.txt R_clustering_general.sbatch
+sbatch --export=Rpath=Code/R_script/DMS_clustering_general.R,outpath=Examples/Output/,x=Examples/Methylation_matrix.txt,dms=Examples/DMS.txt,dms_background=Examples/DMS_background.txt R_clustering_general.sbatch
 
 ```
 
@@ -58,7 +58,7 @@ Example on demo data:
 ```
 cd Code/Shell_script/shell_script_local/ 
 
-./recursive_motif_identification_noclustering.sh -i Examples/ -H <path to motif database> –r mm10.fa -target Examples/DMR.txt -background Examples/DMR_background.txt –s Code/Perl_script/sequence_extractor.pl –R Code/R_script/
+./recursive_motif_identification_noclustering.sh -i Examples/ -H <path to motif database> –r mm10.fa -target DMR.txt -background DMR_background.txt –s Code/Perl_script/sequence_extractor.pl –R Code/R_script/
 ```
 
 Explanation of command:
@@ -68,6 +68,12 @@ Explanation of command:
 -R: path to R script files
 -r: reference fasta file; examples are mm10.fa, hg19.fa etc.
 -h: explains required parameters
+
+#### Running scripts on server
+
+```
+sbatch --export=idir=Examples/,Hpath=/home/bsharmi6/HOMER_custom/,refpath=/home/bsharmi6/mm10bowtie2/mm10.fa,seqextractpath=Code/Perl_script/sequence_extractor.pl,Rpath=Code/R_script/,target=DMR.txt,background=DMR_background.txt recursive_motif_identification_noclustering.sbatch 
+```
 
 
 ### Recursive TRM identification on DMR cluster :
