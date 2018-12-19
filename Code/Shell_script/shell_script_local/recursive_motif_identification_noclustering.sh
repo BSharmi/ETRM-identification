@@ -5,7 +5,7 @@
 # input parameters
 Usage()  
 {  
-  echo -e "Usage: `basename $0` [-h/--help] <-i/--input-dir-to-DMS string> <-H/--HOMER-motif-path string> <-r/--reference-genome-fasta-path string> <-s/--sequence-extractor-path string> <-R/--Rscript-path string> <args>\n"; 
+  echo -e "Usage: `basename $0` [-h/--help] <-i/--input-dir-to-DMS string> <-H/--HOMER-motif-path string> <-r/--reference-genome-fasta-path string>  <-target/--DMR-matrix-path string> <-background/--DMR-background-path string> <-s/--sequence-extractor-path string> <-R/--Rscript-path string> <args>\n"; 
   exit 1;  
 }  
  
@@ -13,6 +13,8 @@ idir=""
 Hpath=""
 refpath=""
 Rpath=""
+target=""
+background=""
 seqextractpath=""
   
 # flexible order (Note: the space after ":")
@@ -36,6 +38,12 @@ while getopts :h:i:H:r:s:R: PARAM_VAL; do
   r|reference-genome-fasta-path)    
     refpath=$OPTARG;  
     ;;
+  target|DMR-matrix-path)    
+    target=$OPTARG;  
+    ;; 
+  background|DMR-background-path)    
+    background=$OPTARG;  
+    ;;
   s|sequence-extractor-path)  
     seqextractpath=$OPTARG;  
     ;;  
@@ -50,7 +58,7 @@ done
 
 shift $(($OPTIND -1))
 
-if [ -z "$idir" ] || [ -z "$Hpath" ] || [ -z "$Rpath" ] || [ -z "$refpath" ] || [ -z "$seqextractpath" ]; then
+if [ -z "$idir" ] || [ -z "$Hpath" ] || [ -z "$Rpath" ] || [ -z "$refpath" ] || [ -z "$target" ] || [ -z "$background" ] || [ -z "$seqextractpath" ]; then
     Usage
 fi
 
