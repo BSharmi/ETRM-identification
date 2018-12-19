@@ -18,21 +18,21 @@ Please download a genome fa file (e.g. mm10.fa). It is a large file and has not 
 
 ## Below are some command line arguments to perform different functions:
 
-### Cluster DMS 
+### Cluster DMR 
 
-./run_DMS_clustering_script.sh –o <path to output directory> -d <3 column BED format DMS file> -x <Methylome matrix> -db <3 column BED format DMS background file> -R <path to R script files>
+./run_DMR_clustering_script.sh –o <path to output directory> -d <3 column BED format DMS file> -x <Methylome matrix> -db <3 column BED format DMS background file> -R <path to R script files>
 
 Example on demo data:
-./run_DMS_clustering_script.sh -o Output/ -d DMS.txt -x DMS_methylome.txt -db DMS_background.txt –R R_script/
+./run_DMR_clustering_script.sh -o Output/ -d DMS.txt -x DMS_methylome.txt -db DMS_background.txt –R R_script/DMS_clustering_general.R
 
 Explanation of command:
 -o: path to store the output
 -d: tab delimited three column BED format DMS file with three columns: chromosome, start, end
 -x: methylome matrix. One column indicates methylome values for DMS location, one column indicates methylome values for one sample. Number of rows of x must match with the number of rows in the DMS file
 -db: tab delimited three column BED format DMS background file to create background regions for each DMS cluster
--R: path to R script files
+-R: R script used for clustering
 -h: explains required parameters
-The command will cluster DMS, and create a folder for each cluster name containing the tab delimited DMS files and the corresponding background files
+The command will cluster DMRs, and create a folder for each cluster name containing the tab delimited DMRs files and the corresponding background files
 
 ### Recursive TRM identification on entire DMS:
 
