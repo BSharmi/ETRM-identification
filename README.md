@@ -4,7 +4,7 @@ The tool can be used to identify transcriptional regulatory modules (TRMs) enric
 ## Methylated motifs
 In order to add methylated motif PWMs to an existing motif databse such as provided by HOMER, please add the motif PWMs to an existing library. For example, to add methylated motifs to HOMER's known motif library of vertebrates, please copy the motifs (motifs.zip) to HOMER library/data/knownTFs/motifs and unzip the file. The user can also append the motifs to an existing motif file. An snapshot of the motif database containing methylated motifs in addition to HOMER's known motifs (e.g. path = /home/bsharmi6/HOMER_custom/data/knownTFs/motifs/) is given below - 
 
-![Alt text](/Users/sharmibanerjee/Desktop/motif.png?raw=true "Canonical and Methylated motifs")
+!(/Users/sharmibanerjee/Desktop/motif.png?raw=true "Canonical and Methylated motifs")
 
 ## Required R libraries: 
 "dplyr", "WGCNA", "pheatmap", "igraph", "gdata"
