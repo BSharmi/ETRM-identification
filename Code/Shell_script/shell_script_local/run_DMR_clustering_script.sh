@@ -4,7 +4,7 @@
 # input parameters
 Usage()  
 {  
-  echo -e "Usage: `basename $0` [-h/--help] <-o/--output-dir string> <-d/--dms-3-columns-BED-file string> <-x/--methylome-matrix string> <-db/--dms-background-3-columnd-BED-file string> <-R/--R-script-path string> <args>\n";  
+  echo -e "Usage: `basename $0` [-h/--help] <-o/--output-dir string> <-d/--dms-3-columns-BED-file string> <-x/--methylome-matrix string> <-b/--dms-background-3-columnd-BED-file string> <-R/--R-script-path string> <args>\n";  
   exit 1;  
 }  
  
@@ -21,7 +21,7 @@ dms_background=""
 #set --$ARG;  
   
 # parse options of shell's input 
-while getopts :h:R:d:o:x:db: PARAM_VAL; do  
+while getopts :h:R:d:o:x:b: PARAM_VAL; do  
   case "${PARAM_VAL}" in  
   o|output-dir)  
     outpath=$OPTARG;
@@ -32,7 +32,7 @@ while getopts :h:R:d:o:x:db: PARAM_VAL; do
   x|methylome-matrix)    
     x=$OPTARG;  
     ;; 
-  db|dms-background-3-columnd-BED-file)    
+  b|dms-background-3-columnd-BED-file)    
     dms_background=$OPTARG;  
     ;;
   d|dms-3-columns-BED-file)  
