@@ -24,7 +24,7 @@ seqextractpath=""
 #set --$ARG;  
   
 # parse options of shell's input 
-while getopts :h:i:H:r:s:R: PARAM_VAL; do  
+while getopts :h:i:H:r:t:b:s:R: PARAM_VAL; do  
   case "${PARAM_VAL}" in  
   i|input-dir-to-DMS)  
     idir=$OPTARG;
