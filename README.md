@@ -64,14 +64,16 @@ Example on demo data:
 ```
 cd Code/Shell_script/shell_script_local/ 
 
-./recursive_motif_identification_noclustering.sh -i Examples/ -H <path to motif database> –r mm10.fa -target DMR.txt -background DMR_background.txt –s Code/Perl_script/sequence_extractor.pl –R Code/R_script/
+./recursive_motif_identification_noclustering.sh -i Examples/ -H <path to motif database> –r mm10.fa -t DMR.txt -b DMR_background.txt –s Code/Perl_script/sequence_extractor.pl –R Code/R_script/
 ```
 
 Explanation of command:
 -i: path containing the DMS file
 -H: path containing motif database 
--s:  sequence extractor Perl script
+-s: sequence extractor Perl script
 -R: path to R script files
+-t: DMR matrix
+-b: DMR background matrix
 -r: reference fasta file; examples are mm10.fa, hg19.fa etc.
 -h: explains required parameters
 
