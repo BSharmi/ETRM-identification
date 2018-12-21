@@ -34,7 +34,7 @@ Example on demo data:
 ```
 cd Code/Shell_script/shell_script_local/ 
 
-./run_DMR_clustering_script.sh –R Code/R_script/DMR_clustering_general.R -o Examples/Output/ -d Examples/DMS.txt -x Examples/Methylation_matrix.txt -b Examples/DMS_background.txt 
+./run_DMR_clustering_script.sh –R Code/R_script/DMR_clustering_general.R -o Examples/Output/ -d Examples/DMR.txt -x Examples/Methylation_matrix.txt -b Examples/DMR_background.txt 
 ```
 
 Explanation of command:
