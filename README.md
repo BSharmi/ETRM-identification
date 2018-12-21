@@ -41,7 +41,7 @@ Explanation of command:
 -o: path to store the output \
 -d: tab delimited three column BED format DMS file with three columns: chromosome, start, end \
 -x: methylome matrix. One column indicates methylome values for DMS location, one column indicates methylome values for one sample. Number of rows of x must match with the number of rows in the DMS file \
--db: tab delimited three column BED format DMS background file to create background regions for each DMS cluster \
+-b: tab delimited three column BED format DMS background file to create background regions for each DMS cluster \
 -R: R script used for clustering \
 -h: explains required parameters \
 The command will cluster DMRs, and create a folder for each cluster name containing the tab delimited DMRs files and the corresponding background files
@@ -68,14 +68,14 @@ cd Code/Shell_script/shell_script_local/
 ```
 
 Explanation of command:
--i: path containing the DMS file
--H: path containing motif database 
--s: sequence extractor Perl script
--R: path to R script files
--t: DMR matrix
--b: DMR background matrix
--r: reference fasta file; examples are mm10.fa, hg19.fa etc.
--h: explains required parameters
+-i: path containing the DMS file \
+-H: path containing motif database \
+-s: sequence extractor Perl script \
+-R: path to R script files \
+-t: DMR matrix \
+-b: DMR background matrix \
+-r: reference fasta file; examples are mm10.fa, hg19.fa etc. \
+-h: explains required parameters \
 
 #### Running scripts on server
 
@@ -97,11 +97,11 @@ cd Code/Shell_script/shell_script_local/
 ```
 
 Explanation of command:
--i: path containing the DMS clusters
--H: path containing motif database 
--s:  sequence extractor Perl script
--R: path to R script files
--r: reference fasta file; examples are mm10.fa, hg19.fa etc
+-i: path containing the DMS clusters \
+-H: path containing motif database  \
+-s:  sequence extractor Perl script \
+-R: path to R script files \
+-r: reference fasta file; examples are mm10.fa, hg19.fa etc \
 -h: explains required parameters
 
 #### Running scripts on server
