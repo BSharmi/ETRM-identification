@@ -41,7 +41,7 @@ Explanation of command:
 -o: path to store the output \
 -d: tab delimited three column BED format DMR file with three columns: chromosome, start, end \
 -x: methylome matrix. One column indicates methylome values for DMR location, one column indicates methylome values for one sample. Number of rows of x must match with the number of rows in the DMR file \
--b: tab delimited three column BED format DMS background file to create background regions for each DMR cluster \
+-b: tab delimited three column BED format DMR background file to create background regions for each DMR cluster \
 -R: R script used for clustering \
 -h: explains required parameters \
 The command will cluster DMRs, and create a folder for each cluster name containing the tab delimited DMRs files and the corresponding background files
