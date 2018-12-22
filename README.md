@@ -64,7 +64,7 @@ Example on demo data:
 ```
 cd Code/Shell_script/shell_script_local/ 
 
-./recursive_motif_identification_noclustering.sh -i Examples/ -H <path to motif database> –r mm10.fa -t DMR.txt -b DMR_background.txt –s Code/Perl_script/sequence_extractor.pl –R Code/R_script/
+./recursive_motif_identification_noclustering.sh -i Examples/ -H <path to motif database> -r mm10.fa -t DMR.txt -b DMR_background.txt –s Code/Perl_script/sequence_extractor.pl -R Code/R_script/
 ```
 
 Explanation of command:
@@ -93,7 +93,7 @@ Example on demo data:
 ```
 cd Code/Shell_script/shell_script_local/ 
 
-./recursive_motif_identification_clustering.sh -i Examples/ -H <path to motif database> –r mm10.fa –s Code/Perl_script/sequence_extractor.pl –R Code/R_script/
+./recursive_motif_identification_clustering.sh -i Examples/ -H <path to motif database> -r mm10.fa –s Code/Perl_script/sequence_extractor.pl -R Code/R_script/
 ```
 
 Explanation of command:
