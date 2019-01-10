@@ -1,4 +1,4 @@
-# Recursive Transcriptional Regulatory Module (TRM) Identification using Transcription Factor Motifs
+# Recursive Transcriptional Regulatory Module (TRM) Identification
 The tool is designed for the identification of transcriptional regulatory modules (TRMs) enriched within differentially methylated regions (DMRs). Given a set of DMRs and background regions, it uses HOMER’s known motif enrichment functionality to recursively identify TF motifs significantly enriched. The user has the option to cluster the DMRs into different subsets first or directly apply recursive TRM identification on the entire set of DMRs. Clustering is based on WGCNA (Weighted Gene Correlation Network Analysis) algorithm but other clustering algorithms such as K-means may be used as well. 
 
 ## Methylated motifs
