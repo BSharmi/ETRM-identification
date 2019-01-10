@@ -10,7 +10,7 @@ For e.g., user can append the methylation-related motifs to HOMER's known motif 
 
 The appended motif files are provided under Motif_db/all.motifs and Motif_db/known.motifs for convenience. The user can replace the known vertebrates motif files in HOMER with these two motif files. 
 
-An snapshot of the motif database containing methylated motifs in addition to HOMER's known motifs (e.g. path = /home/bsharmi6/HOMER_custom/data/knownTFs/motifs/) is given below - 
+An snapshot of the motif database containing a few methylated motifs in addition to HOMER's known motifs (e.g. path = /home/bsharmi6/HOMER_custom/data/knownTFs/motifs/) is given below - 
 
 ![Motif files](https://github.com/BSharmi/TRM-identification/blob/master/Images/motif.png)
 
