@@ -69,7 +69,7 @@ cd Code/Shell_script/shell_script_local/
 
 Explanation of command:
 -i: path containing the DMR file \
--H: path containing motif database \
+-H: path to HOMER database \
 -s: sequence extractor Perl script \
 -R: path to R script files \
 -t: DMR matrix \
@@ -98,7 +98,7 @@ cd Code/Shell_script/shell_script_local/
 
 Explanation of command:
 -i: path containing the DMR clusters \
--H: path containing motif database  \
+-H: path to HOMER database  \
 -s:  sequence extractor Perl script \
 -R: path to R script files \
 -r: reference fasta file; examples are mm10.fa, hg19.fa etc \
