@@ -3,7 +3,7 @@ The tool is designed for the identification of transcriptional regulatory module
 
 ## Methylated motifs
 The user may use an existing motif database \
-OR motifs compiled in this study: copy and unzip the file “motifs.zip” to HOMER library/data/knownTFs/motifs folder \
+OR motifs compiled in this study: copy and unzip the file "motifs.zip" to HOMER library/data/knownTFs/motifs folder \
 OR append the HOMER motif file together with the motif files provided: \
 For example, to add methylated motifs to HOMER's known motif library of vertebrates, please copy the motifs (motifs.zip) to HOMER library/data/knownTFs/motifs and unzip the file. \
 The user can also append the motifs to an existing motif file. For e.g. user can append the methylated motifs to HOMER's known motif files for vertebrates (/home/bsharmi6/HOMER_custom/data/knownTFs/vertebrates/known.motifs). The appended motif files are also provided under Motif_db/all.motifs and Motif_db/known.motifs for convenience. The user can replace the known vertebrates motif files in HOMER with these two motif files. 
