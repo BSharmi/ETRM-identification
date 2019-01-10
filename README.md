@@ -6,7 +6,7 @@ The user may use an existing motif database \
 OR motifs compiled in this study: copy and unzip the file "motifs.zip" to HOMER library/data/knownTFs/motifs folder \
 OR append the HOMER motif file together with the motif files provided: \
 For e.g., user can append the methylation-related motifs to HOMER's known motif files for vertebrates \
-(/home/bsharmi6/HOMER_custom/data/knownTFs/vertebrates/known.motifs). \ 
+(/home/bsharmi6/HOMER_custom/data/knownTFs/vertebrates/known.motifs) \ 
 The appended motif files are provided under Motif_db/all.motifs and Motif_db/known.motifs for convenience. The user can replace the known vertebrates motif files in HOMER with these two motif files. 
 
 An snapshot of the motif database containing methylated motifs in addition to HOMER's known motifs (e.g. path = /home/bsharmi6/HOMER_custom/data/knownTFs/motifs/) is given below - 
