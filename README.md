@@ -74,7 +74,7 @@ Explanation of command:
 -R: path to R script files \
 -t: DMR matrix \
 -b: DMR background matrix \
--r: reference fasta file; examples are mm10.fa, hg19.fa etc. \
+-r: path containing the reference fasta file; examples are mm10.fa, hg19.fa etc. \
 -h: explains required parameters \
 
 #### Running scripts on server
@@ -99,9 +99,9 @@ cd Code/Shell_script/shell_script_local/
 Explanation of command:
 -i: path containing the DMR clusters \
 -H: path to HOMER database  \
--s:  sequence extractor Perl script \
+-s: sequence extractor Perl script \
 -R: path to R script files \
--r: reference fasta file; examples are mm10.fa, hg19.fa etc \
+-r: path containing the reference fasta file; examples are mm10.fa, hg19.fa etc \
 -h: explains required parameters
 
 #### Running scripts on server
