@@ -1,5 +1,5 @@
-# Recursive Transcriptional Regulatory Module (TRM) Identification
-The tool is designed for the identification of transcriptional regulatory modules (TRMs) enriched within differentially methylated regions (DMRs). Given a set of DMRs and background regions, it uses HOMER’s known motif enrichment functionality to recursively identify TF motifs significantly enriched. The user has the option to cluster the DMRs into different subsets first or directly apply recursive TRM identification on the entire set of DMRs. Clustering is based on WGCNA (Weighted Gene Correlation Network Analysis) algorithm but other clustering algorithms such as K-means may be used as well. 
+# Recursive Transcriptional Regulatory Module (ETRM) Identification
+The tool is designed for the identification of transcriptional regulatory modules (ETRMs) enriched within differentially methylated regions (DMRs). Given a set of DMRs and background regions, it uses HOMER’s known motif enrichment functionality to recursively identify TF motifs significantly enriched. The user has the option to cluster the DMRs into different subsets first or directly apply recursive ETRM identification on the entire set of DMRs. Clustering is based on WGCNA (Weighted Gene Correlation Network Analysis) algorithm but other clustering algorithms such as K-means may be used as well. 
 
 ## Methylated motifs
 The user may use an existing motif database \
@@ -12,7 +12,7 @@ The appended motif files are provided under Motif_db/all.motifs and Motif_db/kno
 
 An snapshot of the motif database containing a few methylated motifs in addition to HOMER's known motifs (e.g. path = /home/bsharmi6/HOMER_custom/data/knownTFs/motifs/) is given below - 
 
-![Motif files](https://github.com/BSharmi/TRM-identification/blob/master/Images/motif.png)
+![Motif files](https://github.com/BSharmi/ETRM-identification/blob/master/Images/motif.png)
 
 ## Required R libraries: 
 "dplyr", "WGCNA", "pheatmap", "igraph", "gdata"
@@ -59,7 +59,7 @@ sbatch --export=Rpath=Code/R_script/DMR_clustering_general.R,outpath=Examples/Ou
 
 ```
 
-### Recursive TRM identification on entire DMR matrix:
+### Recursive ETRM identification on entire DMR matrix:
 
 ./recursive_motif_identification_noclustering.sh –i <path to input directory containing DMR files> -H <path to motif database> -r <fasta file> -target <DMR matrix> -background <DMR background matrix> -s <sequence extractor script> -R <path to R script files>
 
