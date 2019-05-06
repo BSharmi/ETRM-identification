@@ -20,8 +20,8 @@ module add R/3.4.4-foss-2018a-X11-20180131
 ####################################################
 
 ## check if any input parameter is empty 
-if [[ -z "$idir" ]] || [[ -z "$Hpath" ]] || [[ -z "$refpath" ]] || [[ -z "$seqextractpath" ]] || [[ -z "$Rpath" ]] ; then 
-	echo -e "Usage: `basename $0` [-h/--help] <-idir/--input-dir-to-DMS string> <-Hpath/--HOMER-motif-path string> <-refpath/--reference-genome-fasta-path string> <-seqextractpath/--sequence-extractor-path string> <-Rpath/--Rscript-path string> <args>\n";  
+if [[ -z "$idir" ]] || [[ -z "$Hpath" ]] || [[ -z "$refpath" ]] || [[ -z "$seqextractpath" ]] || [[ -z "$Rpath" ]] || [[ -z "$target" ]] || [[ -z "$background" ]] ; then 
+	echo -e "Usage: `basename $0` [-h/--help] <-idir/--input-dir-to-DMS string> <-Hpath/--HOMER-motif-path string> <-refpath/--reference-genome-fasta-path string> <-seqextractpath/--sequence-extractor-path string> <-Rpath/--Rscript-path string> <-target/--HOMER-input string> <-background/--HOMER-background string> <args>\n";  
 	exit 1; 
 fi
 ###################################################
