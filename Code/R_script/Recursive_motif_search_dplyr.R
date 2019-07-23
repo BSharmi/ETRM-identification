@@ -37,7 +37,7 @@ known.text.file$center=known.text.file$start + ceiling((known.text.file$end-know
 known.all.motifs.dat=unique(known.motif.bed[duplicated(known.motif.bed, by=c("chrom","start","end")),])
 ## get rows setdiff of duplicated
 known_unique_sites=anti_join(known.motif.bed,known.all.motifs.dat, by = c("chrom", "start", "end"))
-## check if any sites is present after subtracting the candidate TF sites
+## check if any sites is present after subtracting duplicate candidate TF sites
 if(dim(known_unique_sites)[1]>0){
 	## get all columns
 	temp=inner_join(known_unique_sites,known.text.file,by = c("chrom", "start", "end"))
@@ -59,7 +59,8 @@ if(dim(known_unique_sites)[1]>0){
 	write.table(as.data.frame(final_dat), file = paste0(fpath, '/',topmotif,'/',topmotif,'.txt'), sep = "\t", append = F,quote = F,row.names = F,col.names = T,eol = "\n")
 	write.table(as.data.frame(new.all.site.file), file = paste0(fpath, '/',topmotif,'_minus/',topmotif,'_minus.txt'), sep = "\t", append = F,quote = F,row.names = F,col.names = T,eol = "\n")
 }else{
-	## write only candidate motif file
+	## write candidate motif and subtracted candidate motif file
 	write.table(as.data.frame(known.all.motifs.dat), file = paste0(fpath, '/',topmotif,'/',topmotif,'.txt'), sep = "\t", append = F,quote = F,row.names = F,col.names = T,eol = "\n")
+	write.table(as.data.frame(new.all.site.file), file = paste0(fpath, '/',topmotif,'_minus/',topmotif,'_minus.txt'), sep = "\t", append = F,quote = F,row.names = F,col.names = T,eol = "\n")
 }
 
